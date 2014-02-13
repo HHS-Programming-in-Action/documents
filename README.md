@@ -9,3 +9,4 @@ Example documents will include:
 * Design Specification
 * Test Plan
 
+Students may also use this project to experiment with Github
