@@ -28,7 +28,7 @@ Pages that render for desktop/tablet use will prominantly display the site name:
   
 and a site logo in the upper left hand corner.
 
-  ![alt text](./xcalclog.svg)
+  ![alt text](../blob/master/xcalclogo.png?raw=true)
 
 Home Page
 ---------
