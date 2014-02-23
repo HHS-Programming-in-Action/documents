@@ -8,7 +8,7 @@ Introduction
 ------------
 
 The **X-Day Calculator** is a web-based application that will allow students to estimate the probability
-of "getting an x" in a particular class. 
+of "getting an x" in a particular class at Hanover High School.
 
 This specification does not attempt to define either the methods used to estimate probability of "getting
 an x" or the underlying web technology that is used to implement the service.
@@ -67,6 +67,9 @@ symbol. For example:
 
 > 36%
 
+This result will be displayed with a blue sans-serif font, on a white background. The font will be as large
+as possible while still fitting entirely on the screen, leaving room for the home link (below).
+
 There will be a link at the bottom of this page that returns the user **home**. The **home** link will return visitor to the Home Page (above).
 
 About Page
@@ -80,8 +83,21 @@ purposes *only*.
 
 At the bottom, there will be a one line copyright statement.
 
+At the bottom, there will be a single link for returning to the Home Page.
+
 Terms of Service Page
 ---------------------
 
+"Use of this site implies acceptance of the following..." Insert legal boiler-plate from the team
+of lawyers employed by the Dresden School District for exactly this reason.
+
+At the bottom, there will be a single link for returning to the Home Page.
+
 Contact Page
 ------------
+
+Something like:
+
+> This application was created by \<name> [as an e-mail link]. 
+
+At the bottom, there will be a single link for returning to the Home Page.
