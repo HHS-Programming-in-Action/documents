@@ -46,10 +46,42 @@ The main landing page includes the following form elements:
 | Teacher                  | n/a, and a list of names (pulldown)                             |
 | Days since last X        | text box for numeric entry                                      |
 | Days since last snow day | text box for numeric entry                                      |
+| Submit                   | (button)                                                        |
 
 The page should also have the following hyperlinks:
 
 * About
 * Terms of Service
 * Contact
+* 
 
+###Submit Action
+
+When the visitor presses the Submit buton, they should be sento the Results Page:
+
+Results Page
+------------
+
+The Results Page displays the result of the X-Day prediction, as a single two-digit number with a percent
+symbol. For example:
+
+> 36%
+
+There will be a link at the bottom of this page that returns the user **home**. The **home** link will return visitor to the Home Page (above).
+
+About Page
+----------
+
+This page will include the site title and logo (as on the home page) if the browser screen size permits,
+and a short, one-paragraph description of what this site is for.
+
+There will also be a paragraph with disclaimer stating that this site is intended for educational and entertainment
+purposes *only*.
+
+At the bottom, there will be a one line copyright statement.
+
+Terms of Service Page
+---------------------
+
+Contact Page
+------------
