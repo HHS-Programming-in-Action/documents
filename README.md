@@ -5,7 +5,7 @@ The documents repository holds example documents for use in the Programming in A
 
 Example documents will include:
 
-* Functional Specification
+* [Functional Specification](https://github.com/HHS-Programming-in-Action/documents/blob/master/FSsample.md)
 * Design Specification
 * Test Plan
 
