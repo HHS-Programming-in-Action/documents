@@ -29,7 +29,7 @@ Pages that render for desktop/tablet use will prominantly display the site name:
   
 and a site logo in the upper left hand corner:
 
-![alt text](https://github.com/HHS-Programming-in-Action/documents/blob/master/xcalclogo.png?raw=true)
+![logo consisting of a large x with a question mark superimposed](https://github.com/HHS-Programming-in-Action/documents/blob/master/xcalclogo.png?raw=true)
 
 Rendering for very small devices (phones) may omit the logo and site name, if necessary to fit everything 
 in to a single non-scrolling screen.
