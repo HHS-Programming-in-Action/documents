@@ -4,6 +4,20 @@ Functional Specification: X-Day Calculator
 NOTE: This is a sample functional specification for the HHS Programming in Action Course. This is not 
 an attempt to specify an **actual product**.
 
+The software functional specification is an attempt to describe the system as a black box, where all possible
+inputs are described, and the corresponding outputs. What this will look like depends on the type of application.
+
+For embedded applications, such as the firmware that runs a fire alarm system, the functional specification would
+describe the control panel for the system, the various commands that an operator might make on that panel, 
+and the resulting behavior of the system.
+
+For example, "If the operator presses the **test** button, the fire alarm will emit an alarm tone for 5 seconds."
+
+A functional specification may also describe the behavior of the system from the point of view of *other software
+systems*. For example, "If a message with this information is sent to the device, it will respond by emitting
+an alarn tone for 5 seconds."
+
+
 Introduction
 ------------
 
