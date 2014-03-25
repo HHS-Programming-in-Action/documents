@@ -63,19 +63,19 @@ the same server directory as the Python sources. The database will be
 accessed by writing appropriate SQL commands.
 
 Database Tables
----------------
+===============
 
 The following tables are planned for the X-Day Calculator data store:
 
 departments
-~~~~~~~~~~~
+-----------
 Fields: id, departmentname
 
 Notes: this table serves to keep track of all departments in the school.
 Other tables will reference departments by id.
 
 teachers
-~~~~~~~~
+--------
 Fields: id, teacherlastname
 
 Notes: this table serves to keep track fo all teachers in teh school.
@@ -84,7 +84,7 @@ to associate teachers with departments, although this may be a good
 candidate for feature expansion in the future.
 
 departmenthistory
-~~~~~~~~~~~~~~~~~
+-----------------
 Fields: departmentid, dayssincex
 
 Notes: every visitor to the site will report the relevant department and 
@@ -92,7 +92,7 @@ the number of days since the last x-day. Each visitor report will cause
 a new record to be added to this table. 
 
 teacherhistory
-~~~~~~~~~~~~~~
+--------------
 Fields : teacherid, dayssincex
 
 Notes; every visitor to the site will report the relevant teacher and
@@ -154,20 +154,22 @@ This will enable the entry points to be updated with server-side dynamic content
 at a futture date.
 
 /about
-~~~~~~
+------
 
 Self explanatory.
 
 /tos
-~~~~
+----
 
 Terms of service.
 
 /contact
-~~~~~~~~
+--------
 
 Contact information for the site owner.
 
 Mathematical Model
 ==================
 
+Probability of an X-Day is calculated by considering the average number of days since
+an X-Day in the chosen department (N<sub>d</sub>) and the chosen teacher (N<sub>t</sub>). 
