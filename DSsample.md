@@ -47,3 +47,127 @@ Server Side Programming Language
 
 The X-Day Calculator will use server-side scripting in the form of Python, 
 running within the Flask web application framework. 
+
+Client Side Programming Language
+================================
+
+Any client side scripting will be written in Javascript, with the support
+of the Twitter/Bootstrap javascript library.
+
+Data Storage Requirements and Tool Choices
+==========================================
+
+A persistent data store on the server will be maintained using a SQLite 
+database via Flask APIs. The SQLite data store will be a file stored in 
+the same server directory as the Python sources. The database will be
+accessed by writing appropriate SQL commands.
+
+Database Tables
+---------------
+
+The following tables are planned for the X-Day Calculator data store:
+
+departments
+~~~~~~~~~~~
+Fields: id, departmentname
+
+Notes: this table serves to keep track of all departments in the school.
+Other tables will reference departments by id.
+
+teachers
+~~~~~~~~
+Fields: id, teacherlastname
+
+Notes: this table serves to keep track fo all teachers in teh school.
+Other tables will reference teachers by id. There is no need or effort
+to associate teachers with departments, although this may be a good
+candidate for feature expansion in the future.
+
+departmenthistory
+~~~~~~~~~~~~~~~~~
+Fields: departmentid, dayssincex
+
+Notes: every visitor to the site will report the relevant department and 
+the number of days since the last x-day. Each visitor report will cause 
+a new record to be added to this table. 
+
+teacherhistory
+~~~~~~~~~~~~~~
+Fields : teacherid, dayssincex
+
+Notes; every visitor to the site will report the relevant teacher and
+the number of days since their last x-day. Each visitor report will cause
+a new record to be added to this table.
+
+Server System Architecture
+==========================
+
+Server is implemented using WSGI interface to Python via the Flask framework.
+Visitors to the home page will have the option of filling in a simple form
+in which they report a teacher and department and the number of  days since
+the last X-Day. The server will accept this information and use it to add
+records in the departmenthistory and teacherhistory tables in the SQLite 
+database.
+
+The collection of these visitor-reported so-called facts about teacher
+and department behavior are used to generate a predicted probability of
+an X-Day, based on historical behavior and the number of days since the last
+snow day. Consequently, upon submitting the form, the visitor will be 
+redirected to a page that displays the forecast X-Day probability.
+
+To ensure stability of the server software versions, a virtualenv will be
+established with the current latest versions of Python and the Flask 
+framework. The Apache server configuration will have to be modified to ensure
+the virtualenv context is used when executing Python code in Flask.
+
+Visitors are not required to log in and no user information is retained
+on the server. A session variable is created in Flask for each visitor, 
+whih is used to keep track of user state (e.g. is the visitor supposed
+to be viewing the prediction result or the prediction request form).
+
+Client System Architecture
+==========================
+
+On the web browser side, Javascript will be used to deliver a modern, hip web
+browsing experience. Dynamic UI elements will used with wild abandon with the
+assistance of Jquery and Bootstrap Javascript libraries.  Layout of the page 
+will be responsive to client device (phone through desktop) by making use
+of the built-in functionality of the Boostrap library.
+
+Web page design will use HTML and CSS effectively, with HTML reserved solely
+for content and CSS for style, layout and background images. When practical
+to do so, CSS may be used for dynamic UI elements, otherwise Jquery/Bootstrap
+should be used
+
+Major Entry Points
+==================
+
+/
+~
+
+The root page for the X-Day calculator, including a form for fequesting an X-Day
+prediction. The resulting page will be served at this URL as well. This entry point 
+will be served by Python running in Flask.
+
+The following entry points are written as static templates, served via Python/Flask. 
+This will enable the entry points to be updated with server-side dynamic content 
+at a futture date.
+
+/about
+~~~~~~
+
+Self explanatory.
+
+/tos
+~~~~
+
+Terms of service.
+
+/contact
+~~~~~~~~
+
+Contact information for the site owner.
+
+Mathematical Model
+==================
+
