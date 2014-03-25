@@ -125,6 +125,9 @@ on the server. A session variable is created in Flask for each visitor,
 whih is used to keep track of user state (e.g. is the visitor supposed
 to be viewing the prediction result or the prediction request form).
 
+All user input shall be "sanitized" prior to including it in SQL 
+commands.
+
 Client System Architecture
 ==========================
 
@@ -173,3 +176,52 @@ Mathematical Model
 
 Probability of an X-Day is calculated by considering the average number of days since
 an X-Day in the chosen department (N<sub>d</sub>) and the chosen teacher (N<sub>t</sub>). 
+
+Probability, without regard to recent snow day activity, is calculated thus: 
+P<sub>raw</sub> = 100% x (1/N<sub>d</sub> + 1/N<sub>t</sub>)/2
+
+A "Snow Day Multiplier" is applied to P<sub>raw</sub>, with the effect of decreasing
+X-Day probability when a snow day has been called within the last five days. If the
+number of days since a snow-day is given by the variable, N<sub>s</sub> then:
+
+  Praw = 100.0 * (1/Nd + 1/Nt)/2
+  if Ns < 6:
+    P = Praw / 5   # X-Day probability is very low
+  else:
+    P = Praw       # Ages since a snow day, probability is unaltered.
+    
+This model is developed based 100% on my hunch for how it should work. I think I'm right.
+
+Software Test Strategy
+======================
+
+Software testing must be used to ensure both server and client-side programming
+are bug-free. No code shall be deployed to the server unless all automated and 
+manual testing on the new version is completed with 100% success.
+
+On the server side, the built-in facility for unit testing in Flask will be used.
+
+On the client side, a human will execute a series of predetermined test cases, noting
+deviations from expected behavior in a log:
+
+Test cases shall include "normal" input sequences as well as "bogus" sequences.
+Examples of bogus inputs include:
+
+* Entering non-numeric data in a numeric field (e.g. "this sucks" instead of "5" 
+  for the number of days since the last X-Day).
+* Entering invalid numeric data in a numeric field (e.g. "-5" instead of "5"
+  for the number of days since the last X-Day).
+
+In every case, entering invalid data on the web browser will prevent the submit 
+takng place, and no result will be displayed.
+
+Bug Tracking Strategy
+=====================
+
+Source code will be archived/maintained under a Github account. Users and testers 
+may submit comments on code through the Github feedback facility. I don't know
+exactly how this works yet, but I think it will be fine.
+
+Software Deployment Instructions
+================================
+
