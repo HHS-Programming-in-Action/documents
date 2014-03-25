@@ -25,6 +25,8 @@ elements of the product:
 * Server side programming language.
 * Client side programming language.
 * Data storage requirements and tool choices.
+* Server system architecture 
+* Client system architecture
 * Major entry points (URLS) to the site.
 * Mathematical model for determining X-Day probability.
 * Software test strategy.
@@ -43,4 +45,5 @@ scope of this specification.
 Server Side Programming Language
 ================================
 
-
+The X-Day Calculator will use server-side scripting in the form of Python, 
+running within the Flask web application framework. 
