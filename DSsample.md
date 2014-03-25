@@ -235,12 +235,12 @@ When pushing out a release of the code, the following steps must be observed.
 4. Note the URL for the distribution binary.
 5. SSH into the server and navigate to the server document root.
 6. Download the release using the noted URL:
-            wget <URL>
+            wget &lt;URL>
 7. Expand the downloaded binary:
-            tar -xvf <downloaded file name>
+            tar -xvf &lt;downloaded file name>
 8. Perform a cursory verification of the newly expanded folder by visiting
    the corresponding URL in a web browser.
 9. If the installed site appears functional, then move the new folder onto
    the old, replacing it:
-            mv <new folder> <oldfolder>
+            mv &lt;new folder> &lt;oldfolder>
             
