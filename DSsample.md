@@ -184,11 +184,11 @@ A "Snow Day Multiplier" is applied to P<sub>raw</sub>, with the effect of decrea
 X-Day probability when a snow day has been called within the last five days. If the
 number of days since a snow-day is given by the variable, N<sub>s</sub> then:
 
-  Praw = 100.0 * (1/Nd + 1/Nt)/2
-  if Ns < 6:
-    P = Praw / 5   # X-Day probability is very low
-  else:
-    P = Praw       # Ages since a snow day, probability is unaltered.
+      Praw = 100.0 * (1/Nd + 1/Nt)/2
+      if Ns < 6:
+        P = Praw / 5   # X-Day probability is very low
+      else:
+        P = Praw       # Ages since a snow day, probability is unaltered.
     
 This model is developed based 100% on my hunch for how it should work. I think I'm right.
 
@@ -224,4 +224,5 @@ exactly how this works yet, but I think it will be fine.
 
 Software Deployment Instructions
 ================================
+
 
