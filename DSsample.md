@@ -225,4 +225,22 @@ exactly how this works yet, but I think it will be fine.
 Software Deployment Instructions
 ================================
 
+When pushing out a release of the code, the following steps must be observed.
 
+1. The test program is executed in full, with no errors.
+2. Create a tar.gz archive of the project folder (right-click on the folder, 
+   select "compress folder" or equivalent.
+3. From github, click the "release" link for the project and drag the compressed
+   directory file onto the appropriate pane in the page.
+4. Note the URL for the distribution binary.
+5. SSH into the server and navigate to the server document root.
+6. Download the release using the noted URL:
+            wget <URL>
+7. Expand the downloaded binary:
+            tar -xvf <downloaded file name>
+8. Perform a cursory verification of the newly expanded folder by visiting
+   the corresponding URL in a web browser.
+9. If the installed site appears functional, then move the new folder onto
+   the old, replacing it:
+            mv <new folder> <oldfolder>
+            
