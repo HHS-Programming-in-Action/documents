@@ -145,8 +145,8 @@ should be used
 Major Entry Points
 ==================
 
-/
-~
+/~
+--
 
 The root page for the X-Day calculator, including a form for fequesting an X-Day
 prediction. The resulting page will be served at this URL as well. This entry point 
