@@ -140,7 +140,7 @@ of the built-in functionality of the Bootstrap library.
 Web page design will use HTML and CSS effectively, with HTML reserved solely
 for content and CSS for style, layout and background images. When practical
 to do so, CSS may be used for dynamic UI elements, otherwise Jquery/Bootstrap
-should be used
+should be used.
 
 Major Entry Points
 ==================
