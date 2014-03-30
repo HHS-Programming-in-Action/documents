@@ -135,7 +135,7 @@ On the web browser side, Javascript will be used to deliver a modern, hip web
 browsing experience. Dynamic UI elements will used with wild abandon with the
 assistance of Jquery and Bootstrap Javascript libraries.  Layout of the page 
 will be responsive to client device (phone through desktop) by making use
-of the built-in functionality of the Boostrap library.
+of the built-in functionality of the Bootstrap library.
 
 Web page design will use HTML and CSS effectively, with HTML reserved solely
 for content and CSS for style, layout and background images. When practical
