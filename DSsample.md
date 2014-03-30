@@ -242,5 +242,5 @@ When pushing out a release of the code, the following steps must be observed.
    the corresponding URL in a web browser.
 9. If the installed site appears functional, then move the new folder onto
    the old, replacing it:
-            mv &lt;new folder> &lt;oldfolder>
+            mv &lt;newfolder> &lt;oldfolder>
             
