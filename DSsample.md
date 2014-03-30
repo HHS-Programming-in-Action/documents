@@ -154,7 +154,7 @@ will be served by Python running in Flask.
 
 The following entry points are written as static templates, served via Python/Flask. 
 This will enable the entry points to be updated with server-side dynamic content 
-at a futture date.
+at a future date.
 
 /about
 ------
