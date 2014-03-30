@@ -122,7 +122,7 @@ the virtualenv context is used when executing Python code in Flask.
 
 Visitors are not required to log in and no user information is retained
 on the server. A session variable is created in Flask for each visitor, 
-whih is used to keep track of user state (e.g. is the visitor supposed
+which is used to keep track of user state (e.g. is the visitor supposed
 to be viewing the prediction result or the prediction request form).
 
 All user input shall be "sanitized" prior to including it in SQL 
