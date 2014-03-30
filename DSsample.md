@@ -148,7 +148,7 @@ Major Entry Points
 /~
 --
 
-The root page for the X-Day calculator, including a form for fequesting an X-Day
+The root page for the X-Day calculator, including a form for requesting an X-Day
 prediction. The resulting page will be served at this URL as well. This entry point 
 will be served by Python running in Flask.
 
