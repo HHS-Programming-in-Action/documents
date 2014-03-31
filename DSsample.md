@@ -122,7 +122,7 @@ the virtualenv context is used when executing Python code in Flask.
 
 Visitors are not required to log in and no user information is retained
 on the server. A session variable is created in Flask for each visitor, 
-whih is used to keep track of user state (e.g. is the visitor supposed
+which is used to keep track of user state (e.g. is the visitor supposed
 to be viewing the prediction result or the prediction request form).
 
 All user input shall be "sanitized" prior to including it in SQL 
@@ -135,26 +135,26 @@ On the web browser side, Javascript will be used to deliver a modern, hip web
 browsing experience. Dynamic UI elements will used with wild abandon with the
 assistance of Jquery and Bootstrap Javascript libraries.  Layout of the page 
 will be responsive to client device (phone through desktop) by making use
-of the built-in functionality of the Boostrap library.
+of the built-in functionality of the Bootstrap library.
 
 Web page design will use HTML and CSS effectively, with HTML reserved solely
 for content and CSS for style, layout and background images. When practical
 to do so, CSS may be used for dynamic UI elements, otherwise Jquery/Bootstrap
-should be used
+should be used.
 
 Major Entry Points
 ==================
 
-/
-~
+/~
+--
 
-The root page for the X-Day calculator, including a form for fequesting an X-Day
+The root page for the X-Day calculator, including a form for requesting an X-Day
 prediction. The resulting page will be served at this URL as well. This entry point 
 will be served by Python running in Flask.
 
 The following entry points are written as static templates, served via Python/Flask. 
 This will enable the entry points to be updated with server-side dynamic content 
-at a futture date.
+at a future date.
 
 /about
 ------
@@ -242,5 +242,5 @@ When pushing out a release of the code, the following steps must be observed.
    the corresponding URL in a web browser.
 9. If the installed site appears functional, then move the new folder onto
    the old, replacing it:
-            mv &lt;new folder> &lt;oldfolder>
+            mv &lt;newfolder> &lt;oldfolder>
             
